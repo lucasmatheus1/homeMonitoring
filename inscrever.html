@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Inscrever</title>
+      <link rel="stylesheet" href="inscrever.css">
+
+      <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-database.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js" type="text/javascript"></script>
+      <script src="inscrever.js" type="text/javascript"></script>
+   </head>
+   <body>
+      <div class="wrapper">
+         <h1>Inscrever</h1>
+         <form id="connection-information-form">
+            <b>Hostname or IP Address:</b> 
+            <input id="host" type="text" name="host" value="192.168.15.2"><br><br>
+            <b>Port:</b>
+            <input id="port" type="text" name="port" value="9001"><br><br>
+            <b>Topic:</b>
+            <input id="topic" type="text" name="topic" value="esp/ultra"><br><br>
+            <input type="button" onclick="startConnect()" value="Connect">
+            <input type="button" onclick="startDisconnect()" value="Disconnect">
+         </form>
+         <div id="messages"></div>
+      </div>
+   </body>
+    
+
+
+</html>
