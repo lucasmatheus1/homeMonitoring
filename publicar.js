@@ -11,9 +11,10 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
 
   var dado = '';
-  //var tblUsers = document.getElementById('tbl_users_list');
-  var databaseRef = firebase.database().ref('dados/esp/ultra/'); // falta atualizar
-  //var rowIndex = 1;
+  function lerBD(){
+    //var tblUsers = document.getElementById('tbl_users_list');
+    var databaseRef = firebase.database().ref('dados/esp/ultra/'); // falta atualizar
+    //var rowIndex = 1;
   
     databaseRef.once('value', function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
@@ -31,7 +32,10 @@ var firebaseConfig = {
    
    //rowIndex = rowIndex + 1;
     });
-  });
+  });    
+  }
+
+  
 
 function save_user(mensagem){
     var topico = mensagem;
@@ -72,6 +76,11 @@ function startConnect() {
     // Print output for the user in the messages div
     document.getElementById("messages").innerHTML += '<span>Connecting to: ' + host + ' on port: ' + port + '</span><br/>';
     document.getElementById("messages").innerHTML += '<span>Using the following client value: ' + clientID + '</span><br/>';
+
+    
+    //caso queira ler do banco de dados
+    //lerBD();
+
 
     // Initialize new Paho client connection
     client = new Paho.MQTT.Client(host, Number(port), clientID);

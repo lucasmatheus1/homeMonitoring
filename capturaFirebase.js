@@ -13,9 +13,9 @@ var firebaseConfig = {
   var dado = '';
 
   function lerBD(){
-    //var tblUsers = document.getElementById('tbl_users_list');
+    
     var databaseRef = firebase.database().ref('dados/'+ topic_firebase +'/'+numero+'/');
-    //var rowIndex = 1;
+    var rowIndex = 1;
    
      databaseRef.once('value', function(snapshot) {
      snapshot.forEach(function(childSnapshot) {
@@ -25,13 +25,13 @@ var firebaseConfig = {
      dado = String(childData);
      
     
-    //var row = tblUsers.insertRow(rowIndex);
-    //var cellId = row.insertCell(0);
-    //var cellName = row.insertCell(1);
-    //cellId.appendChild(document.createTextNode(childKey));
-    //cellName.appendChild(document.createTextNode(childData.user_name));
+    var row = tblUsers.insertRow(rowIndex);
+    var cellId = row.insertCell(0);
+    var cellName = row.insertCell(1);
+    cellId.appendChild(document.createTextNode(childKey));
+    cellName.appendChild(document.createTextNode(childData));
     
-    //rowIndex = rowIndex + 1;
+    rowIndex = rowIndex + 1;
      });
    });
   }
@@ -76,6 +76,9 @@ var firebaseConfig = {
 
      topic_firebase = document.getElementById("topic_firebase").value;
      numero = document.getElementById("numero").value;
+
+     tblUsers = document.getElementById('tbl_users_list');
+
      // Print output for the user in the messages div
      document.getElementById("messages").innerHTML += '<span>Connecting to: ' + host + ' on port: ' + port + '</span><br/>';
      document.getElementById("messages").innerHTML += '<span>Using the following client value: ' + clientID + '</span><br/>';
