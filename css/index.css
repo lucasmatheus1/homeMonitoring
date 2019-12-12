@@ -1,0 +1,31 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.cabecalho{
+    font-family: monospace;
+    padding-left: 500px;
+    font-size: 50px;
+    block-size: 100px;
+}
+
+.conteudo{
+    font-family: monospace;
+    padding-left: 50px;
+    font-size: 30px;
+    block-size: 80px;
+}
+
+a{
+    color: red;
+    font-family: monospace;
+    padding-left: 90px;
+    font-size: 25px;
+    block-size: 170px;
+    text-decoration: none;
+}
+
+a:hover{
+    color: green;
+}
+
