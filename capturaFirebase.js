@@ -11,12 +11,11 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
 
   var dado = '';
-  topic_firebase = '';
-  topic_firebase = document.getElementById("topic_firebase").value;
 
-   //var tblUsers = document.getElementById('tbl_users_list');
-   var databaseRef = firebase.database().ref('dados/'+ topic_firebase +'/');
-   //var rowIndex = 1;
+  function lerBD(){
+    //var tblUsers = document.getElementById('tbl_users_list');
+    var databaseRef = firebase.database().ref('dados/'+ topic_firebase +'/'+numero+'/');
+    //var rowIndex = 1;
    
      databaseRef.once('value', function(snapshot) {
      snapshot.forEach(function(childSnapshot) {
@@ -35,8 +34,11 @@ var firebaseConfig = {
     //rowIndex = rowIndex + 1;
      });
    });
+  }
+  
+    
  
- function save_user(mensagem){
+ function save_user(mensagem){ // falta atualizar
      var topico = mensagem;
      var data = {
       topico: topico
@@ -71,11 +73,14 @@ var firebaseConfig = {
      // Fetch the hostname/IP address and port number from the form
      host = document.getElementById("host").value;
      port = document.getElementById("port").value;
- 
+
+     topic_firebase = document.getElementById("topic_firebase").value;
+     numero = document.getElementById("numero").value;
      // Print output for the user in the messages div
      document.getElementById("messages").innerHTML += '<span>Connecting to: ' + host + ' on port: ' + port + '</span><br/>';
      document.getElementById("messages").innerHTML += '<span>Using the following client value: ' + clientID + '</span><br/>';
- 
+    
+     lerBD();
      // Initialize new Paho client connection
      client = new Paho.MQTT.Client(host, Number(port), clientID);
  
@@ -145,4 +150,3 @@ var firebaseConfig = {
      client.disconnect();
      document.getElementById("messages").innerHTML += '<span>Disconnected</span><br/>';
  }
- 

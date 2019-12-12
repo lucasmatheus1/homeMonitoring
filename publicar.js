@@ -12,7 +12,7 @@ var firebaseConfig = {
 
   var dado = '';
   //var tblUsers = document.getElementById('tbl_users_list');
-  var databaseRef = firebase.database().ref('dados/esp/ultra/');
+  var databaseRef = firebase.database().ref('dados/esp/ultra/'); // falta atualizar
   //var rowIndex = 1;
   
     databaseRef.once('value', function(snapshot) {

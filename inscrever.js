@@ -9,15 +9,17 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+
+var contador = 0;  
   
-function save_user(topicoBD,mensagem){
+function save_user(topicoBD,mensagem,cont){
 	
     var data = {
      dado: mensagem
     }
     
     var updates = {};
-    updates['/dados/' + topicoBD] = data;
+    updates['/dados/' + topicoBD+'/'+cont] = data;
     firebase.database().ref().update(updates);
     
     //alert('The user is created successfully!');
@@ -130,8 +132,8 @@ function onMessageArrived(message) {
     //if (Number(message.payloadString) < 20) {
     //    publicarMensagem("pegou", "esp/ALGUMA_COISA");
     //}
-    
-    save_user(topic, message.payloadString);
+    contador = contador + 1;
+    save_user(topic, message.payloadString,contador);
 }
 
 
