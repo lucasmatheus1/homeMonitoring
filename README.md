@@ -20,9 +20,9 @@ No Broker é possível realizar filtragem de dados, envio de dados para a Nuvem,
 
 ### Biblotecas e recursos
 
-No ESP32 foram utilizadas as bibliotecas ![PubSubClient.h](https://pubsubclient.knolleary.net/) e a ![WiFi.h](https://www.arduino.cc/en/Reference/WiFi). 
+No ESP32 foram utilizadas as bibliotecas [PubSubClient.h](https://pubsubclient.knolleary.net/) e a [WiFi.h](https://www.arduino.cc/en/Reference/WiFi). 
 
-Na interface WEB foram utilizadas as bibliotecas ![Eclipse Paho MQTT](https://www.eclipse.org/paho/clients/js/) e a ![firebase.js](https://firebase.google.com/docs/web/setup?hl=pt-br).
+Na interface WEB foram utilizadas as bibliotecas [Eclipse Paho MQTT](https://www.eclipse.org/paho/clients/js/) e a [firebase.js](https://firebase.google.com/docs/web/setup?hl=pt-br).
 
 ### Envio e Recebimento de dados
 
@@ -35,4 +35,4 @@ Para o envio e recebimento de dados utilizamos o protocolo MQTT. No ESP32 a PubS
 Utilizar outros sensores e atuadores para testes e possível aplicação no futuro.
 Testar comportamento da rede com outras tecnologias.
 
-###### Créditos: Gif from [giphy.com](https://giphy.com/)
+###### Créditos: Gif from [pinterest.com](https://pinterest.com/)
