@@ -1,7 +1,7 @@
 ## Home Monitoring
 > Projeto sobre IoT - Internet das Coisas
 
-![]()
+![aaaaaa](imagens/gifREADME.gif)
 
 Projeto auxiliar desenvolvido para o projeto de pesquisa "Desenvolvimento de Protótipos de Soluções de Internet das Coisas para monitoramento em ambientes domésticos" realizado no IFPB - Campus Campina Grande
 
