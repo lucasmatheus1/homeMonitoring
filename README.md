@@ -1,4 +1,45 @@
 ## Home Monitoring
+> Project on IoT - Internet of Things
+
+![](images/gifREADME.gif)
+
+Auxiliary project developed for the research project "Development of Prototypes of Internet of Things Solutions for monitoring in domestic environments" carried out at IFPB - Campus Campina Grande
+
+### Idea
+
+The project idea is to implement a wireless sensor network using two main components: Raspberry Pi 3B and ESP32.
+
+### Operation
+
+ESP32 plays the role of a client in a home, in which sensors and actuators can be added, which will work by sending or receiving data to ESP32 and later ESP32 sends this data to the broker, which functions as a controller.
+
+In the Broker it is possible to perform data filtering, sending data to the Cloud, activating other devices and many other possibilities.
+
+> The sensor used in the project was the ultrasonic - HC-SR04.
+> The actuator used was the Micro Servo 9g SG90.
+
+### Libraries and resources
+
+In ESP32 the libraries [PubSubClient.h](https://pubsubclient.knolleary.net/) and [WiFi.h](https://www.arduino.cc/en/Reference/WiFi) were used.
+
+The libraries [Eclipse Paho MQTT](https://www.eclipse.org/paho/clients/js/) and [firebase.js](https://firebase.google.com/docs/ web / setup? hl = en).
+
+### Sending and Receiving Data
+
+For sending and receiving data we use the MQTT protocol. In ESP32 PubSubClient is responsible for MQTT, while on the WEB interface, we use Eclipse Paho MQTT for JavaScript.
+
+> You can use this interface on another device and access the broker.
+
+### Future works
+
+Use other sensors and actuators for testing and possible application in the future.
+Test network behavior with other technologies.
+
+###### Credits: Gif from [pinterest.com](https://pinterest.com/)
+
+> Português
+
+## Home Monitoring
 > Projeto sobre IoT - Internet das Coisas
 
 ![aaaaaa](imagens/gifREADME.gif)
