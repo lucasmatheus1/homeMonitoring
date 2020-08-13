@@ -22,7 +22,7 @@ In the Broker it is possible to perform data filtering, sending data to the Clou
 
 In ESP32 the libraries [PubSubClient.h](https://pubsubclient.knolleary.net/) and [WiFi.h](https://www.arduino.cc/en/Reference/WiFi) were used.
 
-The libraries [Eclipse Paho MQTT](https://www.eclipse.org/paho/clients/js/) and [firebase.js](https://firebase.google.com/docs/ web / setup? hl = en).
+The libraries [Eclipse Paho MQTT](https://www.eclipse.org/paho/clients/js/) and [firebase.js](https://firebase.google.com/docs/web/setup?hl=en).
 
 ### Sending and Receiving Data
 
